@@ -1,1 +1,15 @@
 /*  your css code here. If applicable */
+    <script>
+        document.getElementById("removeButton").addEventListener("click", function() {
+            const colorSelect = document.getElementById("colorSelect");
+            const selectedColor = colorSelect.value;
+            
+            // Loop through the options to find the selected color and remove it
+            for (let i = 0; i < colorSelect.options.length; i++) {
+                if (colorSelect.options[i].value === selectedColor) {
+                    colorSelect.remove(i);
+                    break; // Stop the loop once the color is removed
+                }
+            }
+        });
+    </script>
